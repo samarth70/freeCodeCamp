@@ -15,20 +15,14 @@ The return value is a Boolean. If and only if **all** entries of iterable are `F
 
 If even one of them is `True`, it returns `True`.
 
-The `any()` operation is equivalent to (internally, may not be implemented exactly like this)
 
-    def any(iterable):
-        for element in iterable:
-            if element:
-                return True
-        return False
 
 ## Code Sample
 
     print(any([])) #=> False
     print(any({})) #=> False
     print(any([None])) #=> False
-    print(any(['', {}, 0])) #=> False
+    print(any(['', {}, 0])) #=> True
     print(any([6, 7])) #=> True
     print(any([6, 7, None])) #=> True
     print(any([0, 6, 7])) #=> True
